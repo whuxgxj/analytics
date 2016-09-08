@@ -2,3 +2,6 @@ requests
 gevent
 grequests
 BeautifulSoup4
+googleads
+#google-api-python-client
+pyga

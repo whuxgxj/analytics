@@ -5,4 +5,5 @@
 - 淘宝数据
 - umeng
 - appannie
+- 百度api http://dev2.baidu.com/docs.do
 
