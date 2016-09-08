@@ -44,13 +44,12 @@ class BaseCrawler:
     def __init__(self, urls, params):
         self.urls = urls
         self.params = params
-        self.rs = (grequests.post(
-            u,
-            headers=self.header,
-            params=self.params,
-            hooks={'response': self.process_response},
-            verify=False,
-            timeout=self.timeout) for u in self.urls)
+        self.rs = (grequests.post(u,
+                                  headers=self.header,
+                                  params=self.params,
+                                  hooks={'response': self.process_response},
+                                  verify=False,
+                                  timeout=self.timeout) for u in self.urls)
         self.response_list = [response
                               for response in grequests.map(
                                   self.rs,

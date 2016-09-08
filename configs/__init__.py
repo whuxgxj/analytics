@@ -1,6 +1,6 @@
 redis_config = {'host': '', 'port': 6739, 'db': 0}
 
-umeng_config = {'username': '', 'password': ''}
+umeng_config = {'username': 'qiqimobile@17guagua.com', 'password': 'QJkj2016fhiier'}
 
 celery_config = {
     'BROKER_URL': 'amqp://guest@localhost/',

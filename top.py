@@ -4,7 +4,8 @@ import logging
 import grequests
 from bs4 import BeautifulSoup
 import requests
-
+from requests.packages.urllib3.exceptions import InsecureRequestWarning
+requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 session = requests.Session()
 
 head = {
@@ -40,9 +41,10 @@ def _handle_grequest_exception(request, exception):
 
 
 def handle_end_request(response, verify, cert, proxies, timeout, stream):
-    print response.status_code, response.encoding, response.url, response.cookies, \
-        response.headers, response.history, response.raise_for_status(), \
-        response.content
+    pass
+    # print response.status_code, response.encoding, response.url, response.cookies, \
+    #     response.headers, response.history, response.raise_for_status(), \
+    #     response.content
 
 #urls = ['http://www.csdn.net/'] * 200
 
