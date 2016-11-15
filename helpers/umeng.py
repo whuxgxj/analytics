@@ -14,6 +14,8 @@ from configs import *
 
 class Umeng(BaseCrawler):
     def __init__(self):
+        #'username':'qiqimobile@17guagua.com',
+        #'password':'QJkj2016fhiier',
         self.username = umeng_config.get('username')
         self.password = umeng_config.get('password')
         self.start_date = (
